@@ -1,7 +1,8 @@
 <div class="m-5 flex flex-wrap">
 
   @for (headerMenu of headerList; track $index) {
-    <app-card [title]="headerMenu.title" [description]="headerMenu.description"/>
+    <app-card [title]="headerMenu.title" [description]="headerMenu.description"
+    [routerLink]="headerMenu.link"/>
   }
 
 </div>
