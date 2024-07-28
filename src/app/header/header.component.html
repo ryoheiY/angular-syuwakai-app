@@ -1,17 +1,19 @@
 <mat-toolbar>
-  <button mat-icon-button class="icon" aria-label="icon-button with menu icon">
+  <button aria-label="icon-button with menu icon" class="icon" mat-icon-button>
     <mat-icon>menu</mat-icon>
   </button>
   <a routerLink="">Sampleアプリ</a>
-  <div class="ml-4"><a [routerLinkActiveOptions]="{exact: true}" routerLink=""  routerLinkActive="active" class="text-gray-500 hover:text-gray-800" >Home</a></div>
-  <div class="ml-4"><a routerLink="list" routerLinkActive="active" class="text-gray-500 hover:text-gray-800" >一覧</a></div>
+  <div class="ml-4"><a [routerLinkActiveOptions]="{exact: true}" class="text-gray-500 hover:text-gray-800" routerLink=""
+                       routerLinkActive="active">Home</a></div>
+  <div class="ml-4"><a class="text-gray-500 hover:text-gray-800" routerLink="list" routerLinkActive="active">一覧</a>
+  </div>
 
 
   <span class="spacer"></span>
-  <button mat-icon-button class="icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <button aria-label="Example icon-button with heart icon" class="icon favorite-icon" mat-icon-button>
     <mat-icon>favorite</mat-icon>
   </button>
-  <button mat-icon-button class="icon" aria-label="Example icon-button with share icon">
+  <button aria-label="Example icon-button with share icon" class="icon" mat-icon-button>
     <mat-icon>share</mat-icon>
   </button>
 

@@ -1,6 +1,6 @@
 export interface UserModel {
-  id : number;
-  name : string;
-  nextRole : string;
-  point : number;
+  id: number;
+  name: string;
+  nextRole: string;
+  point: number;
 }
