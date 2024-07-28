@@ -1,0 +1,47 @@
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table
+          class="min-w-full text-center text-sm font-light text-surface">
+          <thead
+            class="border-b border-neutral-200 font-medium dark:border-white/10">
+          <tr>
+            <th scope="col" class="px-6 py-4">Name</th>
+            <th scope="col" class="px-6 py-4">次回Role</th>
+            <th scope="col" class="px-6 py-4">Point</th>
+            <th scope="col" class="px-6 py-4">Increase / Reduce</th>
+            <th scope="col" class="px-6 py-4">CountUp</th>
+          </tr>
+          </thead>
+          <tbody>
+
+            @for (user of users; track user.id){
+              <tr
+                class="border-b border-secondary-200 bg-secondary-100 text-neutral-800">
+                <td class="whitespace-nowrap px-6 py-4">
+                  {{user.name}}
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">{{user.nextRole}}</td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  <div>{{user.point}}</div>
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  <div>(+5)</div>
+                </td>
+                <td class="whitespace-nowrap px-6 py-4">
+                  <button type="button" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">＋</button>
+                  <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">ー</button>
+
+                </td>
+
+              </tr>
+            }
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
