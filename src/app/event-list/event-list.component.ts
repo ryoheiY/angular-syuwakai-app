@@ -1,22 +1,22 @@
 import {Component, inject, OnInit, signal} from '@angular/core';
-import {UserModel} from "../users/user/user.model";
-import {UserService} from "../users/user/user.service";
-import {EventModel} from "../event/event-model";
-import {EventService} from "../event/event.service";
+import {UserModel} from "../user-list/users/user/user.model";
+import {UserService} from "../user-list/users/user/user.service";
+import {EventModel} from "../user-list/event/event-model";
+import {EventService} from "../user-list/event/event.service";
 import {DatePipe} from "@angular/common";
-import {EventModalComponent} from "../event-modal/event-modal.component";
+import {EventModalComponent} from "../user-list/event-modal/event-modal.component";
 
 @Component({
-  selector: 'app-date-list',
+  selector: 'app-event-list',
   standalone: true,
   imports: [
     DatePipe,
     EventModalComponent
   ],
-  templateUrl: './date-list.component.html',
-  styleUrl: './date-list.component.css'
+  templateUrl: './event-list.component.html',
+  styleUrl: './event-list.component.css'
 })
-export class DateListComponent implements OnInit {
+export class EventListComponent implements OnInit {
   users: UserModel[] = [];
   events: EventModel[] = [];
   isVisible = signal<boolean>(false);
