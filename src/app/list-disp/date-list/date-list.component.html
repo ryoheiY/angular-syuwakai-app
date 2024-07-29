@@ -1,0 +1,47 @@
+<div class="flex flex-col">
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div class="overflow-hidden">
+        <table
+          class="min-w-full text-center text-sm font-light text-surface">
+          <thead
+            class="border-b border-neutral-200 font-medium dark:border-white/10">
+          <tr>
+            <th class="px-6 py-4" scope="col">UserName</th>
+            @for (event of events; track event.id) {
+              <th class="px-6 py-4" scope="col">
+                <a (click)="onClickDate(event.id)"
+                   class="cursor-pointer text-blue-400">{{ event.date | date :'yyyy/MM/dd' }}</a>
+              </th>
+            }
+          </tr>
+          </thead>
+          <tbody>
+            @for (user of users; track user.id) {
+              <tr
+                class="border-b border-secondary-200 bg-secondary-100 text-neutral-800">
+                <td class="whitespace-nowrap px-6 py-4">
+                  {{ user.name }}
+                </td>
+                @for (event of events; track event.id) {
+                  @if (user.id === event.speakerId) {
+                    <td class="whitespace-nowrap px-6 py-4">Speaker</td>
+                  }
+                  @if (user.id === event.facilitatorId) {
+                    <td class="whitespace-nowrap px-6 py-4">Facilitator</td>
+                  }
+                }
+              </tr>
+            }
+
+
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<app-event-modal (onClose)="onChangeModal()" [event]="findEventById(selectedEventId())" [isVisible]="isVisible()" />
