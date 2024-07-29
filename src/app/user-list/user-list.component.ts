@@ -1,7 +1,7 @@
 import {Component, signal, } from '@angular/core';
 import {UsersComponent} from "./users/users.component";
 import {ModalComponent} from "../home/ui/modal/modal.component";
-import {EventModalComponent} from "./event-modal/event-modal.component";
+import {EventModalComponent} from "../event-modal/event-modal.component";
 
 @Component({
   selector: 'app-user-list',

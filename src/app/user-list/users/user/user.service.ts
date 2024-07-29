@@ -19,6 +19,7 @@ export class UserService {
     this.users = [
       {id: 1, name: '山田太郎', nextRole: 'Speaker', point: 1},
       {id: 2, name: '山田太郎2', nextRole: 'Facilitator', point: 2},
+      {id: 3, name: '山田太郎3', nextRole: 'Facilitator', point: 2},
     ];
   }
 }

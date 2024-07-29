@@ -8,7 +8,7 @@
             class="border-b border-neutral-200 font-medium dark:border-white/10">
           <tr>
             <th class="px-6 py-4" scope="col">UserName</th>
-            @for (event of events; track event.id) {
+            @for (event of events; track $index) {
               <th class="px-6 py-4" scope="col">
                 <a (click)="onClickDate(event.id)"
                    class="cursor-pointer text-blue-400">{{ event.date | date :'yyyy/MM/dd' }}</a>
@@ -17,19 +17,17 @@
           </tr>
           </thead>
           <tbody>
-            @for (user of users; track user.id) {
-              <tr
-                class="border-b border-secondary-200 bg-secondary-100 text-neutral-800">
-                <td class="whitespace-nowrap px-6 py-4">
-                  {{ user.name }}
-                </td>
+            @for (user of users; track $index) {
+              <tr class="border-b border-secondary-200 bg-secondary-100 text-neutral-800">
+                <td class="whitespace-nowrap px-6 py-4">{{ user.name }}</td>
                 @for (event of events; track event.id) {
-                  @if (user.id === event.speakerId) {
-                    <td class="whitespace-nowrap px-6 py-4">Speaker</td>
-                  }
-                  @if (user.id === event.facilitatorId) {
-                    <td class="whitespace-nowrap px-6 py-4">Facilitator</td>
-                  }
+                  <td class="whitespace-nowrap px-6 py-4">
+                    @if (user.id === event.speakerId) {
+                      Speaker
+                    } @else if (user.id === event.facilitatorId) {
+                      Facilitator
+                    }
+                  </td>
                 }
               </tr>
             }

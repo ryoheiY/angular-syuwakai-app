@@ -4,7 +4,7 @@ import {UserService} from "../user-list/users/user/user.service";
 import {EventModel} from "../user-list/event/event-model";
 import {EventService} from "../user-list/event/event.service";
 import {DatePipe} from "@angular/common";
-import {EventModalComponent} from "../user-list/event-modal/event-modal.component";
+import {EventModalComponent} from "../event-modal/event-modal.component";
 
 @Component({
   selector: 'app-event-list',
@@ -28,6 +28,8 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
     this.users = this.userService.usersList;
     this.events = this.eventService.eventList;
+    console.log(this.users);
+    console.log(this.events);
   }
 
   onChangeModal(): void {

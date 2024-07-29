@@ -25,14 +25,14 @@ export class EventService {
         name: 'event2',
         description: 'event2 desu',
         speakerId: 2,
-        facilitatorId: 1,
+        facilitatorId: 3,
       },{
         id: 3,
         date: new Date(2024, 6, 5),
         name: 'event3',
         description: 'event3 desu',
         speakerId: 1,
-        facilitatorId: 3,
+        facilitatorId: 4,
       },
       );
   }

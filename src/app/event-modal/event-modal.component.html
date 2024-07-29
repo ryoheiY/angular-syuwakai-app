@@ -28,10 +28,11 @@
               <div class="my-4 text-blueGray-500 text-lg leading-relaxed">
                 <label for="eventName" class="block text-sm font-medium ">スピーカー</label>
                 <select
-                  [value]="event()?.speakerId"
                   type="text" id="speaker" class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">
                   <option value="">--選択してください--</option>
-                  <option value="dog">Dog</option>
+                  @for (user of users; track user.id){
+                    <option [value]="user.id" [selected]="event()?.speakerId === user.id">{{user.name}}</option>
+                  }
                 </select>
               </div>
               <div class="my-4 text-blueGray-500 text-lg leading-relaxed">
@@ -39,8 +40,10 @@
                 <select
                   [value]="event()?.facilitatorId"
                   type="text" id="facilitator" class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 ">
-                  <option value="">--選択してください--</option>
-                  <option value="dog">Dog</option>
+                  <option [value]="undefined">--選択してください--</option>
+                  @for (user of users; track user.id){
+                    <option [value]="user.id" [selected]="event()?.facilitatorId === user.id">{{user.name}}</option>
+                  }
                 </select>
               </div>
               <div class="mb-3">
