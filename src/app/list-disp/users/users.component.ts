@@ -73,4 +73,18 @@ export class UsersComponent implements OnInit {
       this.userCountMap.set(user.id, 0);
     })
   }
+
+  /**
+   * 全ユーザのポイントを0にリセットする処理
+   */
+  onPointReset(){
+    //確認メッセージを表示
+    if (!window.confirm('ポイントをリセットしますか?')) {
+      return;
+    }
+    //Reset
+    this.users.map(user => {
+      user.point = 0;
+    })
+  }
 }

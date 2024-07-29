@@ -48,10 +48,14 @@
           </tbody>
         </table>
       </div>
-      <div class="p-5">
-        <button (click)="onConfirmCountChange()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      <div class="flex p-4">
+        <button (click)="onConfirmCountChange()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 "
                 type="button">
           ポイント反映
+        </button>
+        <button (click)="onPointReset()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 me-2 mb-2 "
+                type="button">
+          ポイントリセット
         </button>
 
       </div>
