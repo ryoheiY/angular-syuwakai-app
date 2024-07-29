@@ -9,16 +9,16 @@ interface HeaderMenu {
 }
 
 @Component({
-  selector: 'app-main',
+  selector: 'app-home',
   standalone: true,
   imports: [
     CardComponent,
     RouterLink
   ],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class MainComponent {
+export class HomeComponent {
   headerList: HeaderMenu[] = [
     {title: '一覧', description: 'ユーザ一覧、スピーカー、ファシリテーターを確認できる一覧画面です。', link: 'list'},
     {title: '工事中', description: '工事中です。', link: null},
