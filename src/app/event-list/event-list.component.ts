@@ -28,8 +28,7 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
     this.users = this.userService.usersList;
     this.events = this.eventService.eventList;
-    console.log(this.users);
-    console.log(this.events);
+
   }
 
   onChangeModal(): void {
